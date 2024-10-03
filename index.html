@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartLens Scrapbook</title>
+    <!-- Link to external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar for Scrapbook Navigation -->
+        <div id="scrapbook-sidebar">
+            <h2>Your Scrapbooks</h2>
+            <div id="scrapbook-list">
+                <!-- Scrapbook names will be listed here -->
+            </div>
+            <button id="create-scrapbook-button">Create New Scrapbook</button>
+        </div>
+
+        <!-- Main Content for Selected Scrapbook -->
+        <div id="main-content">
+            <header>
+                <h1>HeartLens</h1>
+            </header>
+
+            <section id="create-entry" style="display:none;">
+                <h2>Create New Entry in <span id="current-scrapbook-name"></span></h2>
+                <div id="image-upload">
+                    <input type="file" accept="image/*" id="upload-image">
+                    <div id="drop-zone">Drag & Drop or Click to Upload</div>
+                    <div id="image-preview"></div>
+                </div>
+
+                <div id="audio-record">
+                    <button id="record-button">🎤</button>
+                </div>
+
+                <div id="story-result">
+                    <p id="generated-story"></p>
+                    <button id="edit-story" onclick="editStory()">Edit</button>
+                    <button id="ok-button" onclick="saveStory()">OK</button>
+                </div>
+
+                <button id="save-entry" onclick="saveToScrapbook()">Save to Scrapbook</button>
+                <button id="next-entry-button" onclick="nextEntry()">Next</button>
+            </section>
+
+            <section id="scrapbook-view">
+                <!-- Scrapbook entries will be dynamically added here -->
+            </section>
+        </div>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="scripts.js"></script>
+</body>
+</html>
